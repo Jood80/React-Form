@@ -3,9 +3,8 @@ import { MyForm } from './MyForm';
 
 const App = () =>(
   <div style={{ textAlign: 'center' }}>
-  <MyForm/>
+    <MyForm onSubmit={() => {}}/>
   </div >
-  
   )
 
 
