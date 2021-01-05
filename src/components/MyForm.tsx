@@ -16,24 +16,16 @@ interface Props {
 export const MyForm: React.FC<Props> = ({ onSubmit }) => {
   const intialValues:MyFormValues = {firstName: '', lastName: '', email: ''}
   return (
-    <Formik initialValues={ intialValues } onSubmit={(values, actions) => {
-      console.log({ values, actions });
+    <Formik initialValues={intialValues} onSubmit={(values, actions) => {
       onSubmit(values)
       actions.setSubmitting(false)
-      alert(JSON.stringify(values, null, 2));
-      }
-    }>{({ values }) => (
-        
+    }}>
         <Form>
         <Field name='firstName' placeholder="First Name" label="first name" component={MyField} /><br/>
-        <Field name='firstName' placeholder="First Name" label="last name" component={MyField} /><br/>
-        <Field name='firstName' placeholder="First Name" label="email" component={MyField} /><br/>
-       
-        <Button type="submit">Submit</Button>
-
-        <pre>{JSON.stringify(values, null, 2)}</pre>          
+        <Field name='lastName' placeholder="Last Name" label="last name" component={MyField} /><br/>
+        <Field name='email' placeholder="Email" label="email" component={MyField} /><br/>
+        <Button type="submit" color="primary">Submit</Button>
       </Form>
-        )}
     </Formik>
   )
 }
