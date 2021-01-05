@@ -3,7 +3,11 @@ import { MyForm } from './MyForm';
 
 const App = () =>(
   <div style={{ textAlign: 'center' }}>
-    <MyForm onSubmit={() => {}}/>
+    <MyForm onSubmit={({ firstName, lastName, email }) => {
+      console.log({ firstName, lastName, email });
+
+      
+    }}/>
   </div >
   )
 
