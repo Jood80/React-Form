@@ -25,9 +25,9 @@ export const MyForm: React.FC<Props> = ({ onSubmit }) => {
     }>{({ values }) => (
         
         <Form>
-        <Field name='firstName' placeholder="First Name" component={MyField} /><br/>
-        <Field name='firstName' placeholder="First Name" component={MyField} /><br/>
-        <Field name='firstName' placeholder="First Name" component={MyField} /><br/>
+        <Field name='firstName' placeholder="First Name" label="first name" component={MyField} /><br/>
+        <Field name='firstName' placeholder="First Name" label="last name" component={MyField} /><br/>
+        <Field name='firstName' placeholder="First Name" label="email" component={MyField} /><br/>
        
         <Button type="submit">Submit</Button>
 
