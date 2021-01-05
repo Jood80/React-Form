@@ -1,13 +1,10 @@
 import * as React from 'react'
 import { FieldProps } from 'formik'
-import { TextField } from '@material-ui/core'
+import { TextField, TextFieldProps } from '@material-ui/core'
 
-interface Props extends FieldProps{
-  label: string, 
-  placeholder: string,
-}
+// adding TextFieldProps declare the types of the field props byDefault for <TextField>
 
-export const MyField: React.FC<Props> = ({label, placeholder, field}) => (
+export const MyField: React.FC<FieldProps & TextFieldProps> = ({label, placeholder, field}) => (
   <TextField
     label={label}
     placeholder={placeholder}
