@@ -1,5 +1,5 @@
 import React from 'react';
-import { MyForm } from './MyForm';
+import { MyForm } from './components/MyForm';
 
 const App = () =>(
   <div style={{ textAlign: 'center' }}>
